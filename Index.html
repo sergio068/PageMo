@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercalisto</title>
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,300;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header" id="inicio">
+        <img src="IMG/bx-food-menu.svg" alt="" class="menu">
+        <nav class="menu-navegacion">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#graficos">Graficos</a>
+            <a href="#compras">Compras</a>
+            <a href="#detalles">Detalles</a>
+
+
+        </nav>
+        <div class="contenedor head">
+            <div class="tittle">
+                <h1>MERCALISTO</h1>
+            </div>
+            &nbsp;
+            <h1>Los productos que deseas al alcance de tu mano</h1>
+            &nbsp;
+            <p class="copy">Mercalisto es un lugar único con una amplia selección de productos que te encantarán. Conoce nuestro sitio y descubre más sobre nuestro mercado y las promociones semanales.</p>
+        </div>
+    </header>
+    <main>
+        <section class="contenedor" id="inicio">
+            <h2 class="subtitulo">Nuestros productos</h2>
+            <div class="contenedor-productos">
+                <img src="IMG/Order.svg">
+                <div class="checklist-product"></div>
+                <div class="product">
+                    <h3 class="n-product"><span class="number">1</span>Cereal Corn Flakes</h3>
+                    <p>Lleva a tu mesa el delicioso cereal Corn Flakes original. 350g.</p>
+                </div>
+                <div class="product">
+                    <h3 class="n-product"><span class="number">2</span>Huevos Campesinos</h3>
+                    <p>Huevos frescos de granja con gallinas libres. 12 Unidades.</p>
+                </div>
+                <div class="product">
+                    <h3 class="n-product"><span class="number">3</span>Queso Campesino</h3>
+                    <p>¡Que no te falte el queso en tus desayunos ni comidas! Queso salado, peso neto 450g</p>
+                </div>
+                <div class="product">
+                    <h3 class="n-product"><span class="number">4</span>Aguacate Lorena</h3>
+                    <p>Aguacate Criollo traído de las tierras vallecaucanas. 1 Unidad</p>
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="productos">
+            <div class="contenedor">
+                <h2 class="subtitulo">Productos</h2>
+                <div class="contenedor-galeria">
+                    <img src="IMG/CornFlakes.jpg" alt="" class="IMG-Galeria">
+                    <img src="IMG/Huevos.jpg" alt="" class="IMG-Galeria">
+                    <img src="IMG/Queso.jpg" alt="" class="IMG-Galeria">
+                    <img src="IMG/Aguacate.jpg" alt="" class="IMG-Galeria">
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="graficos">
+            <div class="contenedor">
+                <h2 class="subtitulo">Gráficos</h2>
+                <div class="contenedor-graficos">
+                    <canvas id="myChart" width="200px" height="200px"></canvas>
+                    <canvas id="myChart2" width="400" height="400" class="chartjs-render-monitor" style="display: block;/* width: 400px; *//* height: 400px; */"></canvas>
+                </div>
+            </div>
+        </section>
+        <section class="imagen-light">
+            <img src="IMG/bx-x.svg" alt="" class="close">
+            <img src="IMG/CornFlakes.jpg" alt="" class="agregar-img">
+        </section>
+        <section class="contenedor" id="compras">
+            <h2 class="subtitulo">Compras</h2>
+            <div class="Buttons">
+            <div class="aux">
+                <button class="PB" type="button" onclick="clicker()">Add Product</button>
+            </div>
+            <div class="aux1" hidden>
+                <p>Aguacates: <a id="cont">4</a></p>
+            </div>
+            <button class="Costumer" id="submit-all" type="submit">Buy</button>
+            </div>
+            <div id="F1" class="form">
+    
+                <form name="submit-form" onsubmit="setTimeout('document.forms[0].reset()',2000)" >
+                    <input name="Nombre Cliente" placeholder="Nombre Cliente">
+                    <select name="Nombre Producto" type="text" placeholder="Nombre Producto">
+    
+                        <option></option>
+                        <option>Huevos Campesinos</option>
+                        <option>Cereal Corn Flakes</option>
+                        <option>Queso Campesino</option>
+                        <option>Aguacate Lorena</option>
+                    </select>
+                    <input name="Cantidad Compras" type="number" placeholder="Cantidad Compras">
+                    <input name="Tarjeta" type="text" placeholder="Tarjeta">
+                    <input name="Telefono" type="text" placeholder="Telefono">
+                    <button id="b1" class="submit-button" type="submit">Send</button>
+                </form>
+            <div id="F2" class="form">
+    
+                <form name="submit-form2" onsubmit="setTimeout('document.forms[1].reset()',2000)" >
+                    <input name="Nombre Cliente" type="text" placeholder="Nombre Cliente">
+                    <select name="Nombre Producto" type="text" placeholder="Nombre Producto">
+    
+                        <option></option>
+                        <option>Huevos Campesinos</option>
+                        <option>Cereal Corn Flakes</option>
+                        <option>Queso Campesino</option>
+                        <option>Aguacate Lorena</option>
+                    </select>
+                    <input name="Cantidad Compras" type="number" placeholder="Cantidad Compras">
+                    <input name="Tarjeta" type="text" placeholder="Tarjeta">
+                    <input name="Telefono" type="text" placeholder="Telefono">
+                    <button id="b2" class="submit-button" type="submit">Send</button>
+                </form>
+            <div id="F3" class="form">
+    
+                <form name="submit-form3" onsubmit="setTimeout('document.forms[2].reset()',2000)" >
+                    <input name="Nombre Cliente" type="text" placeholder="Nombre Cliente">
+                    <select name="Nombre Producto" type="text" placeholder="Nombre Producto">
+        
+                        <option></option>
+                        <option>Huevos Campesinos</option>
+                        <option>Cereal Corn Flakes</option>
+                        <option>Queso Campesino</option>
+                        <option>Aguacate Lorena</option>
+                    </select>
+                    <input name="Cantidad Compras" type="number" placeholder="Cantidad Compras">
+                    <input name="Tarjeta" type="text" placeholder="Tarjeta">
+                    <input name="Telefono" type="text" placeholder="Telefono">
+                    <button id="b3" class="submit-button" type="submit">Send</button>
+                </form>
+            <div id="F4" class="form">
+    
+                <form name="submit-form4" onsubmit="setTimeout('document.forms[3].reset()',2000)" >
+                    <input name="Nombre Cliente" type="text" placeholder="Nombre Cliente">
+                    <select name="Nombre Producto" type="text" placeholder="Nombre Producto">
+    
+                        <option></option>
+                        <option>Huevos Campesinos</option>
+                        <option>Cereal Corn Flakes</option>
+                        <option>Queso Campesino</option>
+                        <option>Aguacate Lorena</option>
+                    </select>
+                    <input name="Cantidad Compras" type="number" placeholder="Cantidad Compras">
+                    <input name="Tarjeta" type="text" placeholder="Tarjeta">
+                    <input name="Telefono" type="text" placeholder="Telefono">
+                    <button id="b4" class="submit-button" type="submit">Send</button>
+                </form>
+                
+        </section>
+        <!-- <section class="contenedor" id="detalles">
+            <h2 class="subtitulo"></h2>
+        </section> -->
+        <section class="contenedor">
+            <h2 class="subtitulo">Movimiento de banda</h2>
+            
+            <div class="Buttons">
+                <div id= "F5" class="form">
+                    <form name="submit-formON" onsubmit="setTimeout('document.forms[4].reset()',2000)" type = "hidden">
+                        <select name ="ON" type="text" placeholder="ON">
+                            <option>1</option>
+                        </select>
+                        <button id="Bin1" class ="Banda" type="submit">Encender</button>
+                    </form>
+                </div>
+                <div id= "F6" class="form">
+                    <form name="submit-formOFF" onsubmit="setTimeout('document.forms[5].reset()',2000)" type = "hidden">
+                        <select name ="ON" type="text" placeholder="ON">
+                            <option>2</option>
+                        </select>
+                        <button id="Bin0" class ="Banda" type="submit">Apagar</button>
+                    </form>
+                </div>  
+            </div>
+        </section>
+    </main>
+    <footer id="detalles">        
+        </div>
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <h2 class="brand">Mercadonia</h2>
+                <p>Tus productos favoritos fácil y rápido</p>
+            </div>
+            <div class="Uni">
+                <a href="./" class="Uni-icon">
+                    <i class='bx bxs-graduation'></i>
+                </a>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3@0.20.5/dist/web3.min.js"></script>
+    <script src="JS/Charts.js"></script>
+    <script  src="JS/Pagina.js"></script>
+    <script  src="JS/Lightbox.js"></script>
+    
+    
+</body>
+</html>
